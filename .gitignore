@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv
+*.sqlite3
+*.log
+
+# TypeScript/React/Node
+node_modules/
+dist/
+build/
+.next/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+
+# Exclude environment variables files but allow examples
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example

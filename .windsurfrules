@@ -1,0 +1,37 @@
+You are contributing to the FFLIQ project — an AI-powered, premium fantasy football assistant.
+
+Please begin by reviewing the following files in the root of the repo:
+- `PLANNING.md` → contains architecture overview, MVP feature scope, tech stack, and implementation goals.
+- `REFERENCE.md` → contains the full historical and strategic reference for this project, including market research, AI design, and rationale.
+- `WORKFLOW_GUIDE.md` → defines the GitLab issue workflow, commit style, AI contribution rules, and dev conventions.
+- `TASK.md` → current task backlog and TODOs. You may add to this if you identify missing pieces during development.
+
+Once you've reviewed these files, follow these guidelines:
+
+1. **Always respect the project structure** outlined in `PLANNING.md`
+2. **Follow the database model design** which includes NFLPlayer, User, League, Team, Roster, GameSchedule, PlayerStats, PlayerProjection, and PlayerPoints
+3. **Implement proper type safety** with TypeScript for frontend and Python type hints for backend
+4. **Create tests** for all significant functionality
+5. **Document your code** with JSDoc/docstrings and keep the markdown files up to date
+6. **Follow the Git workflow** with conventional commits and issue references
+
+For all feature work:
+- Frontend components should be in the appropriate directory under `/frontend/src/components` or `/frontend/src/features`
+- Backend routes should be in `/backend/app/api` with business logic in `/backend/app/services`
+- Database models go in `/backend/app/models/db_models.py` and Pydantic schemas in `/backend/app/models/schemas.py`
+- AI functionality goes in the `/backend/app/ai` module
+- Scoring service should be implemented in `/backend/app/services/scoring.py` with flexible logic for different league settings
+
+When implementing the database models:
+1. Pay special attention to the `League.settings` JSON schema for storing scoring rules
+2. Implement the NFLPlayer model with proper provider_player_ids mapping
+3. Ensure PlayerStats contains all normalized fields needed for fantasy scoring
+4. Design PlayerPoints as a cache for calculated points rather than storing points directly in stats
+
+Your contributions should align with the MVP features listed in `PLANNING.md`, with priority given to:
+1. Core database and API functionality
+2. Team and league management features
+3. AI-powered recommendations and insights
+4. UI implementation and refinement
+
+Create GitLab issues for each feature you work on, following the format specified in `WORKFLOW_GUIDE.md`.
