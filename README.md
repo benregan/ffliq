@@ -19,6 +19,26 @@ FFLIQ is an AI-powered fantasy football assistant built for serious players and 
 
 ## 🔧 Getting Started
 
+1. Clone the repository
+```bash
+git clone https://github.com/your-username/ffliq.git
+cd ffliq
+```
+
+2. Start the Docker containers
+```bash
+docker-compose up -d
+```
+
+3. Apply database migrations to create the tables
+```bash
+docker-compose exec backend alembic upgrade head
+```
+
+4. Access the application
+- Frontend: http://localhost:3000
+- Backend API docs: http://localhost:8000/docs
+
 1. Clone the repo
 2. Run `docker-compose up` to start backend and frontend images
 3. Open the app at `http://localhost:3000`

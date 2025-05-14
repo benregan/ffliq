@@ -39,6 +39,9 @@
 - [ ] Implement PlayerProjection and PlayerNews models
 - [ ] Create scoring service for calculating fantasy points based on league settings
 - [ ] Implement PlayerPoints caching system
+- [x] Set up Alembic for DB migrations (2025-05-14)
+- [x] Create initial database migration (2025-05-14)
+- [ ] Use Alembic for all future schema changes (see Database Migrations section in docs)
 - [ ] Set up data migration and seed data for testing
 
 ## 📱 UI Components
